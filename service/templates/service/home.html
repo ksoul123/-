@@ -1,0 +1,9 @@
+{% extends 'service/base.html' %}
+{% block content %}
+    {% for post in posts.all %}
+        <div>
+            <h2><a href="{% url 'detail' post.id %}">{{post.title}}</a></h2>
+            <p>작성자:  {{post.author}}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
